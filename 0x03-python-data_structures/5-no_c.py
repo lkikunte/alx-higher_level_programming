@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+def no_c(my_string):
+    new_string = my_string[:]
+    while new_string.find('c') != -1:
+        c_index = new_string.find('c')
+        new_string = my_string[:c_index] + my_string[c_index + 1:]
+    while new_string.find('C') != -1:
+        c_index = new_string.find('C')
+        new_string = my_string[:c_index] + my_string[c_index + 1:]
+    return new_string
